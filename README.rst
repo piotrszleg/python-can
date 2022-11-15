@@ -91,9 +91,9 @@ Example usage
 
     # create a bus instance
     # many other interfaces are supported as well (see documentation)
-    with bus = can.Bus(interface='socketcan',
+    with can.Bus(interface='socketcan',
                   channel='vcan0',
-                  receive_own_messages=True)
+                  receive_own_messages=True) as bus:
 
        # send a message
        message = can.Message(arbitration_id=123, is_extended_id=True,
